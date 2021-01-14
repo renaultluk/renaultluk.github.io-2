@@ -62,7 +62,7 @@ var sliderSettings = {}, nav = {}, in5 = {layouts:[
  		"index": 0
  	},
  	{
- 		"name": "iPad V",
+ 		"name": "iPad V 1",
  		"class": "mq-768",
  		"width": 768,
  		"height": 1024,
@@ -71,7 +71,7 @@ var sliderSettings = {}, nav = {}, in5 = {layouts:[
  		"index": 1
  	},
  	{
- 		"name": "Custom V",
+ 		"name": "Custom V 1",
  		"class": "mq-375",
  		"width": 375,
  		"height": 812,
@@ -572,7 +572,7 @@ function initWebApp(){
 				$('body').css({'background':'#fff','padding':'20px'}).append('<p style="font-family:sans-serif;">In order to install this Web App to your Home Screen, you will need to open it with <strong style="font-weight:bold;">Safari</strong>.<br><br><em style="font-style:italic;">Install to Home Screen</em> is not supported in Chrome.<br><br>You can copy and paste the web address above.</p>');
 				return !0;
 			}
-			$('body').addClass('webapp-instructions').css('background','#fff)').append('<img style="'+styleStr+'" src="content-assets/images/add_to_home_'+nameForDeviceFile+'.png" />');
+			$('body').addClass('webapp-instructions').css('background','#fff)').append('<img style="'+styleStr+'" src="assets/images/add_to_home_'+nameForDeviceFile+'.png" />');
 			return !0;
 		}
 	} else if(limitWebAppToDevice) {
@@ -583,7 +583,7 @@ function initWebApp(){
 			window.stop();
 		}
 		var sendLinkURL = 'mailto:?subject=' + escape(webAppEmailSubject.split('{deviceName}').join(deviceName)) +'&amp;body=' + escape(webAppEmailBody.split('{deviceName}').join(deviceName2)) +
-		(location.protocol == 'file:' ? '%28Post%20to%20a%20web%20server%20to%20show%20URL%29' : location.href) +'"><img src="content-assets/images/non_'+nameForNonDeviceFile+'.png';
+		(location.protocol == 'file:' ? '%28Post%20to%20a%20web%20server%20to%20show%20URL%29' : location.href) +'"><img src="assets/images/non_'+nameForNonDeviceFile+'.png';
 		$('body').addClass('webapp-instructions').css('background','#fff').append('<a href="'+sendLinkURL+'" /></a>').find('#container-wrap').hide();
 		return !0;
 	}
@@ -1213,7 +1213,7 @@ function initMedia(hasSlider){
 		});
 	}
 	if(hasSlider && (isIPad || isIPhone)) $('video,audio').mediaelementplayer({success:onMediaLoadSuccess});
-	else { $('video,audio').mediaelementplayer({pluginPath:'content-assets/media/',iPadUseNativeControls:!0, iPhoneUseNativeControls:!0, mode:playerMode,
+	else { $('video,audio').mediaelementplayer({pluginPath:'assets/media/',iPadUseNativeControls:!0, iPhoneUseNativeControls:!0, mode:playerMode,
 		AndroidUseNativeControls:!0, enableKeyboard:!1, success:onMediaLoadSuccess,defaultAudioWidth:280});
 	}
 }
