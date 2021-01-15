@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +34,16 @@
         <div id="item3298" class="pageItem singleline" alt="My Blogs">
           <p class="autoParaStyle1">My Blogs</p>
         </div>
-        <div id="item3321" class="pageItem" alt="Rectangle">&nbsp;</div>
+        <div id="item3321" class="pageItem" alt="Rectangle">
+          <ul>
+            {% for post in site.posts %}
+              <li>
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                {{ post.excerpt }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div><a href="http://" target="_blank" alt="Button 9">
         <button class="pageItem" id="item1951" data-id="1951" name="Button 9">
           <div class="pageItem state btn-off">
@@ -39,7 +52,7 @@
             </div>
           </div>
         </button>
-      </a><a href="_posts/sample.md" target="_blank" alt="Button 10">
+      </a><a href="http://" target="_blank" alt="Button 10">
         <button class="pageItem" id="item1954" data-id="1954" name="Button 10">
           <div class="pageItem state btn-off">
             <div id="item1927" class="pageItem singleline" alt="Blogs">
@@ -54,7 +67,16 @@
         <div id="item3493" class="pageItem singleline" alt="My Blogs">
           <p class="autoParaStyle1">My Blogs</p>
         </div>
-        <div id="item3516" class="pageItem" alt="Rectangle">&nbsp;</div>
+        <div id="item3516" class="pageItem" alt="Rectangle">
+          <ul>
+            {% for post in site.posts %}
+              <li>
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                {{ post.excerpt }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
       <div id="item3587" class="pageItem" alt="Rectangle">&nbsp;</div><a href="http://" target="_blank" alt="Button 20">
         <button class="pageItem" id="item3588" data-id="3588" name="Button 20">
@@ -79,7 +101,16 @@
         <div id="item3782" class="pageItem singleline" alt="My Blogs">
           <p class="autoParaStyle4">My Blogs</p>
         </div>
-        <div id="item3805" class="pageItem" alt="Rectangle">&nbsp;</div>
+        <div id="item3805" class="pageItem" alt="Rectangle">
+          <ul>
+            {% for post in site.posts %}
+              <li>
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                {{ post.excerpt }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
       <div id="item3880" class="pageItem" alt="Rectangle">&nbsp;</div><a href="http://" target="_blank" alt="Button 26">
         <button class="pageItem" id="item3881" data-id="3881" name="Button 26">

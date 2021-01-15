@@ -1,0 +1,4 @@
+- name: Blog Menu
+  link: /
+- name: Blog Content
+  link: /blog-content.html
